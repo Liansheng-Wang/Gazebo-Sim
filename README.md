@@ -7,10 +7,16 @@ Be used for simulation of UAV and UGV in Gazebo
 
 该功能包是 ackerman 车的 gazebo 仿真环境
 
+### competition_sim
+
+是2022年无人机比赛时使用的仿真场景，但是没有怎么弄过。它所需要的模型在 models/uavs 中
+
 
 ## 使用方法
 
-将 models 中的  放入 ~/.gazebo/models中。
+models 包含了 ugvs 和 uavs 的模型，可以根据具体使用需要，选择合适的模型。
+
+将 models/ugvs 中的模型  放入 ~/.gazebo/models中。 或者自定义模型路径.
 
 其中 kinect 这个 模型原本的包里应该有，但是没有传感器插件，所以把官方的替换掉
 
@@ -52,3 +58,5 @@ sudo gedit /opt/ros/noetic/lib/controller_manager/spawner
 181 行  name_yaml = yaml.load(open(name))  替换为
 
 name_yaml = yaml.load(open(name), Loader=yaml.FullLoader)
+
+
